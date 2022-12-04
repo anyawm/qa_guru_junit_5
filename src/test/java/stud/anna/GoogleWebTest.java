@@ -1,10 +1,8 @@
 package stud.anna;
 
 import com.codeborne.selenide.CollectionCondition;
-import com.codeborne.selenide.conditions.Visible;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
@@ -15,7 +13,7 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class WebTest {
+public class GoogleWebTest {
 
     @BeforeEach
     void setUp() {
@@ -49,13 +47,6 @@ public class WebTest {
         $("img[alt='Поиск с помощью камеры']").click();
         $(byText("Выполните поиск по изображению в Google Объективе")).shouldBe(visible);
     }
-
-    @ParameterizedTest
-    @Tag("BLOCKER")
-    void selenideButtonsTest(String locale, List<String> buttons) {
-
-    }
-
 
     @DisplayName("Popup Photo")
     @Test
