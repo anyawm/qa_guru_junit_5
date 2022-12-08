@@ -37,7 +37,7 @@ public class HWParamTests {
         $(".drugs-results__heading").shouldHave(text(expectedRemedy));
     }
 
-       static Stream<Arguments> ButtonsTest() {
+       static Stream<Arguments> buttonsTest() {
         return Stream.of(
                 Arguments.of("Еда", List.of("perm_identity", "ресторанная критика", "уличная еда", "дегустация")),
                 Arguments.of("Поиск лекарств", List.of("perm_identity", "здоровье", "поиск лекарств", "клиники")),
