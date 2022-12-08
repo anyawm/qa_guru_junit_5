@@ -49,7 +49,7 @@ public class HWParamTests {
     @MethodSource
     @ParameterizedTest(name = "Проверка наличия кнопок {1} " + "при выборе раздела в меню {0}")
     @Tag("BLOCKER")
-    void ButtonsTest(String menu, List<String> buttons) {
+    void buttonsTest(String menu, List<String> buttons) {
         $$("#nav-mobile a").find(text(menu)).click();
         $$(".tab a").filter(visible)
                 .shouldHave(CollectionCondition.texts(buttons));
@@ -57,7 +57,7 @@ public class HWParamTests {
 
     @Disabled
     @Test
-    void TestRemedy () {
+    void testRemedy () {
         $("#health_form_ac").setValue("ибупрофен").pressEnter();
         $(".drugs-results__heading").shouldHave(text("по запросу «ибупрофен»"));
     }
